@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+*.log
+# A docs/ mappa NEM kerül ide — azt a GitHub Pages szolgálja
+.DS_Store
+.vercel
+next-env.d.ts
+
+# Titkos env-fájlok — SOHA ne kerüljenek GitHub-ra (token, secret van bennük)
+.env
+.env.local
+.env*.local
+.env.production
+.env.development
