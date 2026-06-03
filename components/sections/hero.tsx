@@ -1,19 +1,55 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Meteors } from "@/components/ui/meteors";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { TextReveal } from "@/components/ui/text-reveal";
+
+const VERBS = [
+  { word: "Megépítjük", className: "text-gradient-brand" },
+  { word: "Megtaláltatjuk", className: "text-gradient-reach" },
+  { word: "Automatizáljuk", className: "text-gradient-ai" },
+];
+
+function VerbCycler() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((v) => (v + 1) % VERBS.length), 2200);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <span className="relative inline-block align-baseline">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={i}
+          initial={{ y: "0.4em", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: "-0.4em", opacity: 0 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className={`inline-block ${VERBS[i].className}`}
+        >
+          {VERBS[i].word}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
+
+const PILLARS = [
+  { label: "Jelenlét", dot: "bg-blue-400" },
+  { label: "Láthatóság & elérés", dot: "bg-fuchsia-400" },
+  { label: "AI & automatizálás", dot: "bg-emerald-400" },
+];
 
 export function Hero() {
   return (
     <AuroraBackground className="min-h-[100svh]">
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-      <div className="relative pointer-events-none absolute inset-0 overflow-hidden">
-        <Meteors number={20} />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <Meteors number={16} />
       </div>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -27,14 +63,17 @@ export function Hero() {
           transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm"
         >
-          <Sparkles className="size-3.5 text-blue-400" /> Új generációs weboldalak — Maczkó Márk
+          <Sparkles className="size-3.5 text-emerald-400" /> Digitális partner vállalkozásoknak — Maczkó Márk
         </motion.div>
 
-        <TextReveal
-          as="h1"
-          text="Weboldalak, amelyek eladnak."
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/50"
-        />
+        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+          <span className="block min-h-[1.1em]">
+            <VerbCycler />
+          </span>
+          <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/50">
+            a vállalkozásod.
+          </span>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -42,14 +81,30 @@ export function Hero() {
           transition={{ delay: 0.6 }}
           className="text-base md:text-xl text-neutral-300/90 max-w-2xl"
         >
-          Modern, villámgyors, SEO-barát weboldalak vállalkozóknak.
-          Egyedi tervezés, prémium animációk, mérhető eredmények.
+          Segítek a cégeknek digitálisan növekedni — a weboldaltól és a Google/Meta
+          hirdetésektől a kereső- és AI-láthatóságig, és az AI beépítéséig a mindennapokba.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.75 }}
+          className="flex flex-wrap items-center justify-center gap-2"
+        >
+          {PILLARS.map((p) => (
+            <span
+              key={p.label}
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-neutral-300"
+            >
+              <span className={`size-1.5 rounded-full ${p.dot}`} /> {p.label}
+            </span>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.85 }}
           className="flex flex-col sm:flex-row gap-3 mt-2"
         >
           <Link href="/kapcsolat">
@@ -58,10 +113,10 @@ export function Hero() {
             </ShimmerButton>
           </Link>
           <Link
-            href="/munkaim"
+            href="/szolgaltatasok"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm px-7 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
           >
-            Munkáim megtekintése
+            Mit tudok nyújtani?
           </Link>
         </motion.div>
 

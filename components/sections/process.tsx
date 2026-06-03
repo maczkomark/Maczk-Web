@@ -4,76 +4,81 @@ import { Timeline } from "@/components/ui/timeline";
 export function Process() {
   const data = [
     {
-      title: "1. Egyeztetés",
+      title: "1. Felmérés",
       content: (
         <div>
           <p className="text-neutral-300 text-sm md:text-base mb-4">
-            Ingyenes konzultáció — megismerem a vállalkozást, a célokat és a célközönséget. 30–60 perc, online vagy személyesen.
+            Ingyenes konzultáció — megismerem a vállalkozást, a célokat és azt, hol tartasz most a
+            digitális térben. 30–60 perc, online vagy személyesen.
           </p>
           <ul className="text-sm text-neutral-400 space-y-1.5 list-disc pl-5">
-            <li>Üzleti célok feltérképezése</li>
-            <li>Konkurencia áttekintése</li>
-            <li>Költségvetés és határidő egyeztetése</li>
+            <li>Üzleti célok és célközönség feltérképezése</li>
+            <li>Jelenlegi online jelenlét és láthatóság átnézése</li>
+            <li>Legnagyobb fájdalompontok és gyors nyerők azonosítása</li>
           </ul>
         </div>
       ),
     },
     {
-      title: "2. Tervezés",
+      title: "2. Terv & prioritások",
       content: (
         <div>
           <p className="text-neutral-300 text-sm md:text-base mb-4">
-            Wireframe és Figma design. Két körös review, mielőtt egy sor kódot írnék.
+            Összerakjuk, mi hozza a legtöbb értéket a legkevesebb ráfordításból — legyen az weboldal,
+            hirdetés, láthatóság vagy egy automatizálás. Fontossági sorrendben, érthető tervvel.
           </p>
           <ul className="text-sm text-neutral-400 space-y-1.5 list-disc pl-5">
-            <li>Sitemap és felhasználói folyamatok</li>
-            <li>Pixel-perfect Figma mockup minden oldalra</li>
-            <li>Mobil + desktop verzió</li>
+            <li>Mit építsünk, mit hirdessünk, mit automatizáljunk</li>
+            <li>Reális ütemterv és átlátható költségkeret</li>
+            <li>Mérőszámok: miből látjuk majd, hogy működik</li>
           </ul>
         </div>
       ),
     },
     {
-      title: "3. Fejlesztés",
+      title: "3. Megvalósítás",
       content: (
         <div>
           <p className="text-neutral-300 text-sm md:text-base mb-4">
-            Modern stack: Next.js, Tailwind, prémium animációk. Heti előrehaladás, kérdezhetsz bármikor.
+            Megépítem és beüzemelem — weboldal, kampány, Google Cégprofil, GEO vagy AI-automatizálás.
+            Heti előrehaladás, bármikor kérdezhetsz.
           </p>
           <ul className="text-sm text-neutral-400 space-y-1.5 list-disc pl-5">
-            <li>Tiszta, karbantartható kód</li>
-            <li>Reszponzív minden eszközön</li>
-            <li>SEO és accessibility a kezdetektől</li>
+            <li>Kész, működő megoldás — nem prezentáció</li>
+            <li>Modern, gyors, megbízható technológia</li>
+            <li>Betanítás: megmutatom, hogyan használd</li>
           </ul>
         </div>
       ),
     },
     {
-      title: "4. Tesztelés",
+      title: "4. Mérés & finomítás",
       content: (
         <div>
           <p className="text-neutral-300 text-sm md:text-base mb-4">
-            Reszponzív, sebesség, SEO, böngészők. PageSpeed 90+ a cél, és el is érjük.
+            Az adatok döntenek, nem az érzések. Megnézzük, mi működik, és finomítunk — hogy a
+            befektetésed valóban megtérüljön.
           </p>
           <ul className="text-sm text-neutral-400 space-y-1.5 list-disc pl-5">
-            <li>Cross-browser tesztelés</li>
-            <li>Lighthouse audit &amp; Core Web Vitals</li>
-            <li>Visszajelzés alapján finomítás</li>
+            <li>Konverziók, forgalom, megtérülés mérése</li>
+            <li>Kampányok és tartalom optimalizálása</li>
+            <li>Átlátható havi riport, érthető nyelven</li>
           </ul>
         </div>
       ),
     },
     {
-      title: "5. Élesítés és támogatás",
+      title: "5. Folyamatos partnerség",
       content: (
         <div>
           <p className="text-neutral-300 text-sm md:text-base mb-4">
-            Domain, hosting, analytics. Az első hónap utánkövetés ingyenes — utána havidíjas csomag.
+            Nem hagylak magadra az élesítés után. Havidíjas konstrukcióban viszem tovább a céged
+            digitális fejlődését — lépésről lépésre, ahogy nőtök.
           </p>
           <ul className="text-sm text-neutral-400 space-y-1.5 list-disc pl-5">
-            <li>Google Analytics + Search Console beállítás</li>
-            <li>1 hónap garancia minden hibára</li>
-            <li>Oktató videó az adminhoz</li>
+            <li>Karbantartás, frissítések, rendben tartás</li>
+            <li>Új lehetőségek (AI, automatizálás) bevezetése</li>
+            <li>Egy elérhető partner, aki ismeri a vállalkozásod</li>
           </ul>
         </div>
       ),
@@ -83,7 +88,7 @@ export function Process() {
     <Timeline
       data={data}
       heading="A folyamat — átláthatóan"
-      subheading="Az első beszélgetéstől az élesítésig — fix árral, fix határidővel, weekly check-innel."
+      subheading="Az első beszélgetéstől a folyamatos fejlődésig — érthetően, határidőre, mérhető eredménnyel."
     />
   );
 }

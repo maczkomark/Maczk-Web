@@ -8,14 +8,9 @@ export function Footer() {
     <footer className="relative border-t border-white/10 bg-black">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 grid gap-12 md:grid-cols-4">
         <div>
-          <Link href="/" className="inline-block mb-4" aria-label={SITE.name}>
-            <Image
-              src="/logo-wordmark.png"
-              alt={`${SITE.name} — ${SITE.tagline}`}
-              width={400}
-              height={120}
-              className="h-12 w-auto brightness-0 invert"
-            />
+          <Link href="/" className="inline-flex items-center gap-2.5 mb-4" aria-label={SITE.name}>
+            <Image src="/logo-mark.png" alt="" width={40} height={40} className="size-10 rounded-md" />
+            <span className="font-display text-lg font-bold text-white tracking-wide">{SITE.name}</span>
           </Link>
           <p className="text-sm text-neutral-400 max-w-xs">{SITE.description}</p>
         </div>
@@ -35,8 +30,10 @@ export function Footer() {
           <h4 className="text-white font-semibold mb-4 text-sm">Szolgáltatások</h4>
           <ul className="space-y-2 text-sm">
             <li><Link href="/szolgaltatasok/weboldal-keszites" className="text-neutral-400 hover:text-white">Weboldal készítés</Link></li>
-            <li><Link href="/szolgaltatasok/webaruhaz" className="text-neutral-400 hover:text-white">Webáruház</Link></li>
             <li><Link href="/szolgaltatasok/seo" className="text-neutral-400 hover:text-white">SEO optimalizálás</Link></li>
+            <li><Link href="/szolgaltatasok/geo-lathatosag" className="text-neutral-400 hover:text-white">GEO — AI-láthatóság</Link></li>
+            <li><Link href="/szolgaltatasok/hirdetes" className="text-neutral-400 hover:text-white">Google &amp; Meta hirdetés</Link></li>
+            <li><Link href="/szolgaltatasok/ai-automatizalas" className="text-neutral-400 hover:text-white">AI-automatizálás</Link></li>
             <li><Link href="/szolgaltatasok" className="text-neutral-400 hover:text-white">Összes szolgáltatás</Link></li>
           </ul>
         </div>

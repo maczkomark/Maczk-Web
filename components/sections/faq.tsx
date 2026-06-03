@@ -29,7 +29,19 @@ const faqs = [
   },
   {
     q: "Hogyan dolgozunk együtt — online vagy személyesen?",
-    a: "Mindkettő mehet. Budapesten elérhető vagyok személyesen, országosan online (Google Meet/Zoom). A teljes folyamat 100%-ban végigvihető online is.",
+    a: "Mindkettő mehet. Szombathelyen és Vas vármegyében elérhető vagyok személyesen, országosan pedig online (Google Meet/Zoom). A teljes folyamat 100%-ban végigvihető online is.",
+  },
+  {
+    q: "Csak weboldalt készítesz, vagy mást is?",
+    a: "Sokkal többet. A céged teljes digitális fejlődésében segítek: weboldal és webáruház, SEO és AI-keresős láthatóság (GEO), Google Cégprofil, Google és Meta (Facebook/Instagram) hirdetések, valamint AI-automatizálás és AI-betanítás. Tekints rám a vállalkozásod digitalizációs asszisztenseként.",
+  },
+  {
+    q: "Mit jelent az AI-automatizálás egy kis cégnek?",
+    a: "Azt, hogy az ismétlődő, időrabló feladatokat a gép végzi: foglalás-visszaigazolás, e-mail-rendezés, számlafeldolgozás, recenzió-kérés. Kész, beüzemelt megoldást adok — nem tanácsadást vagy prezentációt —, és meg is tanítom a csapatodat használni az AI-eszközöket.",
+  },
+  {
+    q: "Mi az a GEO, és miért fontos?",
+    a: "A GEO (generative engine optimization) a SEO következő rétege: arra optimalizál, hogy a céged megjelenjen a ChatGPT és a Google AI válaszaiban is, ne csak a klasszikus találati listán. Egyre többen kérdezik az AI-t ajánlásért — érdemes ott is láthatónak lenni.",
   },
   {
     q: "Garantálod, hogy első leszek a Google-ben?",

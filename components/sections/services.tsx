@@ -1,6 +1,5 @@
 "use client";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { Code2, Smartphone, Search, ShoppingCart, Palette, Wrench, Layers } from "lucide-react";
+import { Code2, Search, ShoppingCart, Wrench, Layers, Sparkles, Megaphone, Bot, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -9,29 +8,37 @@ export function Services() {
     {
       title: "Egyedi weboldalak",
       description: "Designtól a publikálásig — gyors, reszponzív, márkára szabott. Next.js + Tailwind stack.",
-      icon: <Code2 className="h-5 w-5 text-neutral-300" />,
-      className: "md:col-span-2",
+      icon: <Code2 className="h-5 w-5 text-blue-400" />,
     },
     {
       title: "Webáruház",
-      description: "Shopify, WooCommerce, custom — fizetéssel, szállítással, riportokkal.",
-      icon: <ShoppingCart className="h-5 w-5 text-neutral-300" />,
+      description: "Stripe, Barion, WooCommerce — fizetéssel, szállítással, riportokkal.",
+      icon: <ShoppingCart className="h-5 w-5 text-blue-400" />,
     },
     {
       title: "SEO optimalizálás",
       description: "Technikai és tartalmi SEO. Első helyre a Google találatok között.",
-      icon: <Search className="h-5 w-5 text-neutral-300" />,
+      icon: <Search className="h-5 w-5 text-fuchsia-400" />,
     },
     {
-      title: "Mobil-first design",
-      description: "Telefonon is gyönyörű és villámgyors. Mert a látogatók 70%-a mobilról jön.",
-      icon: <Smartphone className="h-5 w-5 text-neutral-300" />,
+      title: "GEO — AI-keresős láthatóság",
+      description: "Hogy a céged megjelenjen a ChatGPT és a Google AI válaszaiban is. Google Cégprofil rendben tartva.",
+      icon: <Sparkles className="h-5 w-5 text-fuchsia-400" />,
     },
     {
-      title: "Branding & UI design",
-      description: "Logó, színpaletta, tipográfia — egységes vizuális identitás.",
-      icon: <Palette className="h-5 w-5 text-neutral-300" />,
-      className: "md:col-span-2",
+      title: "Google & Meta hirdetések",
+      description: "Célzott Google- és Facebook/Instagram-kampányok, mérhető megtérüléssel.",
+      icon: <Megaphone className="h-5 w-5 text-fuchsia-400" />,
+    },
+    {
+      title: "AI-automatizálás",
+      description: "Foglalás-visszaigazoló, e-mail- és számlakezelés, recenzió-kérő — kész, beüzemelve. A gép dolgozik helyetted.",
+      icon: <Bot className="h-5 w-5 text-emerald-400" />,
+    },
+    {
+      title: "AI-használat betanítása",
+      description: "Megmutatom a csapatodnak, hogyan spórolj napi órákat AI-eszközökkel — a ti folyamataitokra szabva.",
+      icon: <GraduationCap className="h-5 w-5 text-emerald-400" />,
     },
     {
       title: "Karbantartás",
@@ -59,20 +66,26 @@ export function Services() {
             Designtól a launch-ig — és azon túl is. Egy emberrel beszélsz, egy emberrel dolgozol.
           </p>
         </motion.div>
-        <BentoGrid className="md:auto-rows-[12rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-fr">
           {items.map((it, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.05 }}
-              className={it.className}
+              transition={{ delay: (i % 4) * 0.05 }}
+              className="h-full"
             >
-              <BentoGridItem {...it} />
+              <div className="group/bento h-full flex flex-col rounded-2xl border border-white/[0.08] bg-neutral-900/60 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/[0.18] hover:shadow-2xl hover:shadow-blue-500/[0.08]">
+                <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition group-hover/bento:-translate-y-0.5">
+                  {it.icon}
+                </div>
+                <h3 className="font-display text-lg font-bold text-white mb-1.5">{it.title}</h3>
+                <p className="font-sans text-sm text-neutral-400 leading-relaxed">{it.description}</p>
+              </div>
             </motion.div>
           ))}
-        </BentoGrid>
+        </div>
         <div className="text-center mt-12">
           <Link href="/szolgaltatasok" className="inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-white">
             Összes szolgáltatás megtekintése →

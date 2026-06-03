@@ -7,7 +7,7 @@ import { SITE } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "A folyamat — hogyan dolgozunk együtt",
   description:
-    "Az első egyeztetéstől az élesítésig: 5 lépés, fix árral, fix határidővel. Heti előrehaladás, átláthatóan.",
+    "A felméréstől a folyamatos partnerségig: 5 lépés a céged digitális fejlődéséhez. Weboldal, hirdetés, láthatóság és AI — átláthatóan, határidőre.",
   alternates: { canonical: `${SITE.url}/folyamat` },
 };
 
@@ -17,7 +17,7 @@ export default function FolyamatPage() {
       <PageHeader
         eyebrow="Folyamat"
         title="Hogyan dolgozunk együtt"
-        subtitle="5 lépés az ötlettől az élő weboldalig. Átláthatóan, határidőre, fix áron."
+        subtitle="5 lépés a felméréstől a folyamatos digitális fejlődésig. Átláthatóan, határidőre, mérhető eredménnyel."
       />
       <Process />
       <ContactCTA heading="Kezdjük el az 1. lépést" />

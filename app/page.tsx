@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/hero";
+import { Pillars } from "@/components/sections/pillars";
 import { Services } from "@/components/sections/services";
 import { TechStack } from "@/components/sections/tech-stack";
 import { About3D } from "@/components/sections/about-3d";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Pillars />
       <Services />
       <TechStack />
       <About3D />

@@ -16,8 +16,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
-        display: ["Cal Sans", "Inter", "ui-sans-serif"],
+        sans: ["var(--font-sans)", "DM Sans", "ui-sans-serif", "system-ui"],
+        display: ["var(--font-display)", "Space Grotesk", "ui-sans-serif"],
       },
       animation: {
         aurora: "aurora 60s linear infinite",

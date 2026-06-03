@@ -107,6 +107,9 @@ export function ContactCTA({ heading = "Kérj árajánlatot" }: { heading?: stri
               <option>Landing page / kampányoldal</option>
               <option>Régi oldal felújítása</option>
               <option>SEO optimalizálás</option>
+              <option>GEO — AI-keresős láthatóság</option>
+              <option>Google & Meta hirdetések</option>
+              <option>AI-automatizálás / AI-betanítás</option>
               <option>Egyéb</option>
             </select>
             <textarea

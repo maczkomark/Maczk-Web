@@ -15,11 +15,11 @@ export function About3D() {
           viewport={{ once: true }}
           className="text-center mb-12 max-w-3xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-wider text-violet-400 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-wider text-emerald-400 mb-4">
             Rólam
           </div>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-gradient">
-            {SITE.owner} — webfejlesztő, akivel könnyű dolgozni
+            {SITE.owner} — a céged digitalizációs asszisztense
           </h2>
         </motion.div>
         <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
@@ -27,13 +27,16 @@ export function About3D() {
           <div className="flex h-full flex-col md:flex-row">
             <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
               <h3 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-4">
-                Egy fejlesztő, egy felelős, egy kapcsolat.
+                Egy ember, aki végigviszi a digitális fejlődésedet.
               </h3>
               <p className="text-neutral-300 max-w-lg mb-3">
-                Maczkó Márk vagyok — webfejlesztő magánvállalkozó. Nem ügynökség, nem outsource — én tervezem, én építem, én viszem át a célvonalon.
+                Maczkó Márk vagyok. Nem „csak" weboldalt készítek — segítek a vállalkozásodnak
+                belépni és növekedni a digitális térben: weboldaltól és webáruháztól a Google/Meta
+                hirdetésig, a kereső- és AI-láthatóságig, és az AI beépítéséig a mindennapjaitokba.
               </p>
               <p className="text-neutral-400 text-sm max-w-lg">
-                5+ év tapasztalattal, 50+ projekttel a hátam mögött. Modern stack-kel dolgozom, mert a látogatóid nem fognak várni egy lassú oldalra. Magyarul, érthetően, határidőre.
+                Nem ügynökség, nem outsource — egy felelős, egy kapcsolat. A technológiát fordítom
+                le a gyakorlatra: konkrét, működő megoldások, magyarul, érthetően, határidőre.
               </p>
             </div>
             <div className="flex-1 relative min-h-[300px]">

@@ -1,11 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { SITE } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin", "latin-ext"], display: "swap", variable: "--font-inter" });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
+});
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -16,16 +26,19 @@ export const metadata: Metadata = {
   description: SITE.description,
   keywords: [
     "weboldal készítés",
-    "weboldalkészítő cég",
-    "webfejlesztő",
     "webáruház készítés",
     "SEO optimalizálás",
+    "GEO",
+    "AI keresőoptimalizálás",
+    "Google Ads kezelés",
+    "Meta Ads",
+    "Facebook hirdetés",
+    "AI automatizálás",
+    "AI integráció vállalkozásoknak",
+    "digitális marketing Szombathely",
     "Maczkó Márk",
     "Maczkó Web",
-    "Next.js fejlesztő",
-    "React fejlesztő",
-    "prémium weboldal",
-    "Budapest webfejlesztő",
+    "digitális partner",
   ],
   authors: [{ name: SITE.owner, url: SITE.url }],
   creator: SITE.owner,
@@ -74,12 +87,22 @@ const jsonLd = {
   areaServed: { "@type": "Country", name: "Magyarország" },
   address: { "@type": "PostalAddress", addressLocality: SITE.city, addressCountry: "HU" },
   priceRange: "Egyedi árajánlat",
-  serviceType: ["Weboldal készítés", "Webáruház készítés", "SEO optimalizálás", "UI/UX design"],
+  serviceType: [
+    "Weboldal készítés",
+    "Webáruház készítés",
+    "SEO optimalizálás",
+    "GEO — AI-keresős láthatóság",
+    "Google Ads kezelés",
+    "Meta (Facebook/Instagram) hirdetés",
+    "AI-automatizálás",
+    "AI-integráció és betanítás",
+  ],
+  slogan: SITE.tagline,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hu" className={`${inter.variable} dark`}>
+    <html lang="hu" className={`${spaceGrotesk.variable} ${dmSans.variable} dark`}>
       <head>
         <script
           type="application/ld+json"

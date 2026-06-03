@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { Users, Briefcase, Clock, Sparkles } from "lucide-react";
+import { Layers, Handshake, Bot, Clock } from "lucide-react";
 
 const items = [
-  { icon: Sparkles, label: "Egyedi tervezés", desc: "Nem template — minden projekt sajátos" },
-  { icon: Briefcase, label: "Tapasztalt", desc: "Modern stack, professzionális megvalósítás" },
-  { icon: Users, label: "Elégedett ügyfelek", desc: "Visszatérő és ajánlott munkák" },
+  { icon: Layers, label: "Egy kézből, A-tól Z-ig", desc: "Weboldal, hirdetés, láthatóság és AI — egy felelőssel" },
+  { icon: Handshake, label: "Helyi, gyakorlati partner", desc: "Nem ügynökség — érthető, kézzelfogható megoldások" },
+  { icon: Bot, label: "AI-fókusz", desc: "A céged az AI irányába, mérhető időmegtakarítással" },
   { icon: Clock, label: "Gyors válaszidő", desc: "Átlagosan 24 órán belül visszajelzek" },
 ];
 

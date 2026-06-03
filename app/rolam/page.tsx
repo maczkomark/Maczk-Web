@@ -8,17 +8,17 @@ import { SITE } from "@/lib/utils";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Rólam — Maczkó Márk webfejlesztő",
+  title: "Rólam — Maczkó Márk, digitalizációs partner",
   description:
-    "Maczkó Márk vagyok, magyarországi webfejlesztő. 5+ év tapasztalat, 50+ projekt. Modern Next.js, React, SEO és prémium animációk.",
+    "Maczkó Márk vagyok — segítek a vállalkozásoknak digitálisan növekedni és integrálni az AI-t. Weboldal, webáruház, Google/Meta hirdetés, kereső- és AI-láthatóság (GEO) és automatizálás egy kézből.",
   alternates: { canonical: `${SITE.url}/rolam` },
 };
 
 const values = [
-  { title: "Egy ember, egy felelős", desc: "Nem ügynökség. Te velem dolgozol, én viszem át a projektet." },
-  { title: "Modern stack", desc: "Next.js, React, Tailwind, Framer Motion. Lassú WordPress-toldozgatás helyett gyors, jövőtálló kód." },
-  { title: "Mérhető eredmények", desc: "Pagespeed, konverzió, kulcsszó-pozíció — adatokkal dolgozom." },
-  { title: "Átláthatóság", desc: "Heti előrehaladás, fix árajánlat, fix határidő. Nincsenek meglepetések." },
+  { title: "Egy ember, egy felelős", desc: "Nem ügynökség. Te velem dolgozol, én viszem át a projektet az elejétől a végéig." },
+  { title: "Digitalizációs partner", desc: "Weboldaltól a hirdetésen át az AI-ig — egy helyen, egy gondolkodással, a céged fejlődésére hangolva." },
+  { title: "Mérhető eredmények", desc: "Megtérülés, konverzió, időmegtakarítás, láthatóság — adatokkal dolgozom, nem érzésre." },
+  { title: "Átláthatóság", desc: "Érthető terv, fix árajánlat, rendszeres visszajelzés. Nincsenek meglepetések." },
 ];
 
 export default function RolamPage() {
@@ -26,16 +26,22 @@ export default function RolamPage() {
     <>
       <PageHeader
         eyebrow="Rólam"
-        title="Maczkó Márk — webfejlesztő"
-        subtitle="Egy ember, akit megbízhatsz a vállalkozásod online megjelenésével."
+        title="Maczkó Márk — a céged digitalizációs asszisztense"
+        subtitle="Egy ember, aki végigviszi a vállalkozásod digitális fejlődését — a weboldaltól az AI-ig."
       />
       <section className="relative py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 prose prose-invert prose-neutral">
           <p className="text-lg text-neutral-300 leading-relaxed">
-            5+ év tapasztalattal és 50+ projekttel a hátam mögött egyedül építem a klienseim weboldalait — a designtól az élesítésig. Nem küldlek át junior fejlesztőhöz, nem outsource-olok tengerentúlra. Te velem beszélsz, és a kódot is én írom.
+            Maczkó Márk vagyok, és abban segítek, hogy a vállalkozásod belépjen és növekedjen a
+            digitális térben. Ez ma már jóval több, mint egy weboldal: hozzátartozik, hogy
+            megtaláljanak a Google-ön és az AI-keresőkben, hogy a hirdetéseid valódi érdeklődőket
+            hozzanak, és hogy az ismétlődő munkát a gép vegye le a válladról.
           </p>
           <p className="text-neutral-400 leading-relaxed mt-4">
-            Az volt mindig a célom, hogy ne csak <em>egy oldal</em> legyen — hanem egy üzleti eszköz. Egy oldal, ami eladja a terméket, lefoglalja az időpontot, megfogja a látogatót. Ehhez kell a modern stack, a SEO, a prémium animáció és a stabil infrastruktúra.
+            Nem küldlek át junior fejlesztőhöz, nem outsource-olok tengerentúlra. Te velem beszélsz,
+            és a megoldásokat is én rakom össze. A célom mindig az, hogy a digitális jelenléted ne
+            dísz legyen, hanem <em>üzleti eszköz</em>: ami elad, időt szabadít fel és növeli a céged.
+            A technológiát — beleértve az AI-t — lefordítom a hétköznapi gyakorlatra.
           </p>
         </div>
       </section>
