@@ -56,6 +56,7 @@ export const NAV = [
   { href: "/", label: "Főoldal" },
   { href: "/rolam", label: "Rólam" },
   { href: "/szolgaltatasok", label: "Szolgáltatások" },
+  { href: "/arkalkulator", label: "Árkalkulátor" },
   { href: "/munkaim", label: "Munkáim" },
   { href: "/folyamat", label: "Folyamat" },
   { href: "/gyik", label: "GYIK" },
