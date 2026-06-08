@@ -18,9 +18,20 @@
     --muted: 240 5% 12%;
     --muted-foreground: 240 5% 65%;
     --border: 240 6% 18%;
+    --input: 240 6% 18%;
     --ring: 217 91% 60%;
     --card: 0 0% 6%;
     --card-foreground: 0 0% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 5% 16%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
 
     /* Pillér 1 — "Megépítjük" (web/shop/SEO): kék → ibolya → rózsaszín */
     --build-from: #60a5fa;

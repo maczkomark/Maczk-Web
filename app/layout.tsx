@@ -3,7 +3,11 @@ import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
+import { GoogleAnalytics } from "@/components/analytics";
+import { CookieBanner } from "@/components/ui/cookie-banner";
 import { SITE } from "@/lib/utils";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-3Z2K4XQ03D";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin", "latin-ext"],
@@ -114,6 +118,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="relative">{children}</main>
         <Footer />
+        <CookieBanner />
+        <GoogleAnalytics gaId={GA_ID} />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SITE, NAV } from "@/lib/utils";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { CookieSettingsButton } from "@/components/cookie-settings-button";
 
 export function Footer() {
   return (
@@ -46,8 +47,12 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/5 py-6 text-center text-xs text-neutral-500">
-        © {new Date().getFullYear()} {SITE.name} — {SITE.owner}. Minden jog fenntartva.
+      <div className="border-t border-white/5 py-6 px-4 flex flex-col sm:flex-row items-center justify-center gap-x-4 gap-y-3 text-xs text-neutral-500">
+        <span>© {new Date().getFullYear()} {SITE.name} — {SITE.owner}. Minden jog fenntartva.</span>
+        <span className="hidden sm:inline text-neutral-700">·</span>
+        <Link href="/adatvedelem" className="hover:text-white transition">Adatkezelés & sütik</Link>
+        <span className="hidden sm:inline text-neutral-700">·</span>
+        <CookieSettingsButton className="text-neutral-500 hover:text-white transition cursor-pointer underline-offset-4 hover:underline" />
       </div>
     </footer>
   );
