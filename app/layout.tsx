@@ -64,7 +64,6 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
   },
-  icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
   category: "technology",
 };
 
@@ -81,6 +80,8 @@ const jsonLd = {
   alternateName: SITE.owner,
   description: SITE.description,
   url: SITE.url,
+  logo: `${SITE.url}/logo-wordmark.png`,
+  image: `${SITE.url}/logo-wordmark.png`,
   email: SITE.email,
   telephone: SITE.phone,
   founder: { "@type": "Person", name: SITE.owner },

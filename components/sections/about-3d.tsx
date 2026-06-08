@@ -22,7 +22,7 @@ export function About3D() {
             {SITE.owner} — a céged digitalizációs asszisztense
           </h2>
         </motion.div>
-        <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
+        <Card className="w-full h-auto md:h-[500px] bg-black/[0.96] relative overflow-hidden">
           <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
           <div className="flex h-full flex-col md:flex-row">
             <div className="flex-1 p-8 md:p-12 relative z-10 flex flex-col justify-center">
@@ -39,7 +39,7 @@ export function About3D() {
                 le a gyakorlatra: konkrét, működő megoldások, magyarul, érthetően, határidőre.
               </p>
             </div>
-            <div className="flex-1 relative min-h-[300px]">
+            <div className="relative w-full h-[320px] md:h-auto md:flex-1 md:min-h-[300px]">
               <SplineScene
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
