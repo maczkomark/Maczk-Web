@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, BadgePercent } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -64,6 +64,21 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm text-white/80 backdrop-blur-sm"
         >
           <Sparkles className="size-3.5 text-emerald-400" /> Digitális partner vállalkozásoknak — Maczkó Márk
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.35 }}
+        >
+          <Link
+            href="/arkalkulator"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 px-4 py-1.5 text-sm font-semibold text-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-shadow"
+          >
+            <BadgePercent className="size-4" />
+            Akció: egyszeri díjakra −20%, havidíjakra −10%
+            <ArrowRight className="size-3.5 transition group-hover:translate-x-0.5" />
+          </Link>
         </motion.div>
 
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">

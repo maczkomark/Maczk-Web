@@ -16,9 +16,9 @@ export default function ArkalkulatorPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Árkalkulátor"
+        eyebrow="Árkalkulátor · akció"
         title="Állítsd össze, mire van szükséged"
-        subtitle="Jelöld be a szolgáltatásokat, és láss azonnal egy tájékoztató árat — majd egy kattintással küldd át nekem ajánlatkérésként. Egyedi igényre személyre szabott ajánlatot adok."
+        subtitle="Jelöld be a szolgáltatásokat, és láss azonnal egy tájékoztató árat — most akció: az egyszeri díjakra −20%, a havidíjakra −10% kedvezmény. Egy kattintással átküldöd nekem ajánlatkérésként; egyedi igényre személyre szabott ajánlatot adok."
       />
       <Calculator />
       <ContactCTA heading="Inkább beszéljük meg élőben?" />
